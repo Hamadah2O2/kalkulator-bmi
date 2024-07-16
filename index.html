@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Kalkulator BMI - Zen</title>
+		<link rel="stylesheet" href="./css/style.css" type="text/css" media="all" />
+		<script src="./js/script.js"></script>
+	</head>
+	<body>
+		<header>
+			<h1 class="title">Kalkulator BMI</h1>
+			<span>Tetaplah bernafas</span>
+		</header>
+		<main id="main">
+			<div class="wrapper">
+				<section id="calc" class="calc">
+					<form action="" id="formBmi" accept-charset="utf-8">
+						<div class="input-section">
+							<h4 class="input-title">Jenis Kelamin:</h4>
+							<div class="radio-wrapper">
+								<input type="radio" id="pria" name="jenis_kelamin" value="pria" checked />
+								<input type="radio" id="wanita" name="jenis_kelamin" value="wanita" />
+
+								<label for="pria" class="option pria">
+									<div class="dot"></div>
+									<span>Pria</span>
+								</label>
+								<label for="wanita" class="option wanita">
+									<div class="dot"></div>
+									<span>Wanita</span>
+								</label>
+							</div>
+						</div>
+
+						<div class="input-section">
+							<h4 class="input-title">Berat badan (kg)</h4>
+							<input type="text" name="berat-badan" id="berat-badan" value="" placeholder="Masukan berat badan" />
+						</div>
+
+						<div class="input-section">
+							<h4 class="input-title">Usia (tahun)</h4>
+							<input type="text" name="usia" id="usia" value="" placeholder="Masukan usia" />
+						</div>
+
+						<div class="input-section">
+							<h4 class="input-title">Tinggi badan (cm)</h4>
+							<input type="text" name="tinggi-badan" id="tinggi-badan" value="" placeholder="Masukan tinggi badan" />
+						</div>
+
+						<div class="button-section">
+							<button class="btn" type="submit">Hitung BMI</button>
+							<button class="btn" type="reset">Reset</button>
+						</div>
+					</form>
+				</section>
+				<section id="result-section" class="result-section">
+					<h1 class="title-hasil">Hasil BMI Kamu</h1>
+					<span id="result" class="result">0</span>
+					<p id="result-text" class="result-text">Hasil BMI mu akan tampil di sini</p>
+					<div class="result-explanation">
+						<p>Keterangan:</p>
+						<span id="result-explanation-text">BMI (Body Mass Index) adalah sebuah indeks yang digunakan untuk mengukur dan menentukan status berat badan seseorang.</span>
+					</div>
+					<div class="block-explain">
+						<div class="block">
+							<span class="block-title">Kurus</span>
+							<span>< 18.5</span>
+						</div>
+						<div class="block">
+							<span class="block-title">Normal</span>
+							<span>18.5 - 24.9</span>
+						</div>
+						<div class="block">
+							<span class="block-title">Gemuk</span>
+							<span>25.0 - 29.9</span>
+						</div>
+						<div class="block">
+							<span class="block-title">Obesitas</span>
+							<span>30 ></span>
+						</div>
+					</div>
+				</section>
+			</div>
+		</main>
+	</body>
+</html>
