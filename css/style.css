@@ -58,13 +58,15 @@ header span {
 
 main {
 	position: relative;
-	max-width: 768px;
+	max-width: 992px;
+	height: auto;
 	overflow: hidden;
 	width: 100%;
 	padding: 1.2rem;
 	background-color: var(--white-color);
 	border-radius: 12px;
 	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.9);
+	transition: 0.3s ease-in-out;
 }
 
 .wrapper {
@@ -277,9 +279,13 @@ section.result-section {
 	margin-bottom: var(--margin-bottom-res);
 }
 
+.result-section p.result-text b {
+	color: var(--primary);
+}
+
 .result-section .result-explanation p {
 	text-align: center;
-	margin-bottom: 12px;
+	margin-bottom: 0;
 }
 
 .result-section .result-explanation span {
@@ -288,6 +294,8 @@ section.result-section {
 	padding: var(--input-pad);
 	text-align: center;
 	margin-bottom: calc(var(--margin-bottom-res) * 2);
+	color: hsl(0 0% 0% / 60%);
+	transition: 0.3s ease-in-out;
 }
 
 .block-explain {
@@ -327,6 +335,7 @@ section.result-section {
 
 .block span {
 	font-size: 12px;
+	font-weight: 600;
 }
 
 .block span:nth-last-child(1) {
