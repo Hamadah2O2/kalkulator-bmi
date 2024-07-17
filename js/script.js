@@ -60,6 +60,10 @@ document.addEventListener("DOMContentLoaded", function () {
 	// Mengambil element form
 	const form = document.getElementById("formBmi");
 
+	// Mengambil radio Kelamin
+	const radioPria = document.getElementById("pria");
+	const radioWanita = document.getElementById("wanita");
+
 	// Mengambil input tinggi dan berat badan
 	const inputBeratBadan = document.querySelector("#berat-badan");
 	const inputTinggiBadan = document.querySelector("#tinggi-badan");
@@ -100,5 +104,15 @@ document.addEventListener("DOMContentLoaded", function () {
 		resultNumber.innerText = 0;
 		resultText.innerText = "Hasil BMI mu akan tampil di sini";
 		resultExplanation.innerText = bmi.origin.keterangan;
+	});
+
+	// Mengambil element body
+	const body = document.body;
+	// Ketika radio di klik
+	radioPria.addEventListener("click", function () {
+		body.classList.remove("women");
+	});
+	radioWanita.addEventListener("click", function () {
+		body.classList.add("women");
 	});
 });

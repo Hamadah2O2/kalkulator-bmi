@@ -10,6 +10,7 @@
 	--darker-primary: hsl(225 70% 57%);
 	--pria: #5679e1;
 	--wanita: #da2ed8;
+	--wanita-gelap: #c723c4;
 }
 
 * {
@@ -25,6 +26,12 @@ body {
 	justify-content: center;
 	align-items: center;
 	background-color: #2f478e;
+}
+
+.women {
+	--pria: var(--wanita);
+	--primary: var(--wanita);
+	background-color: #a136a5 !important;
 }
 
 header {
@@ -63,6 +70,7 @@ main {
 	overflow: hidden;
 	width: 100%;
 	padding: 1.2rem;
+	margin: 0 24px;
 	background-color: var(--white-color);
 	border-radius: 12px;
 	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.9);
@@ -71,7 +79,6 @@ main {
 
 .wrapper {
 	display: flex;
-	flex-flow: wrap;
 	gap: 24px;
 }
 
@@ -219,7 +226,8 @@ section.calc {
 }
 
 .btn:hover {
-	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+	box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.6);
+	scale: 1.05;
 }
 
 .btn[type="submit"] {
@@ -229,6 +237,10 @@ section.calc {
 
 .btn[type="submit"]:hover {
 	background-color: var(--darker-primary);
+}
+
+body.women .btn[type="submit"]:hover {
+	background-color: var(--wanita-gelap);
 }
 
 .btn[type="reset"] {
@@ -262,6 +274,7 @@ section.result-section {
 
 .result-section .result {
 	display: block;
+	min-width: 145px;
 	font-size: 3rem;
 	font-weight: 500;
 	text-align: center;
@@ -365,4 +378,28 @@ section.result-section {
 .block:nth-child(4) {
 	border-radius: 0 50px 50px 0;
 	background-color: #ef1010;
+}
+
+@media (max-width: 768px) {
+	body {
+		height: fit-content;
+		justify-content: center;
+		align-items: flex-start;
+	}
+	header .title {
+		font-size: 1.5rem;
+	}
+	.wrapper {
+		flex-flow: column;
+	}
+	section {
+		width: 100%;
+	}
+	section.calc {
+		padding-bottom: 2.5rem;
+	}
+	main {
+		margin-top: 5rem;
+		margin-bottom: 2rem;
+	}
 }
