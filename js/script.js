@@ -24,7 +24,7 @@ const bmi = {
 
 // Fungsi menghitung BMI
 function hitungBMI(berat, tinggi) {
-	// validasi angka, jika bukan angka maka alert
+	// validasi angka, jika bukan angka maka alert dan nyatakan gagal!
 	if (!validateNumber(berat)) {
 		window.alert("Berat badan hanya boleh di isi angka!");
 		return -1;
@@ -88,11 +88,12 @@ document.addEventListener("DOMContentLoaded", function () {
 		// menghitung BMI
 		let result = hitungBMI(berat, tinggi);
 
-		// jika result tidak menunjukan suatu kesalahan
+		// jika result tidak gagal atau menunjukan suatu kesalahan
 		if (result != -1) {
 			// Ambil tipe bmi
 			let bmiResult = getTipeBMI(result);
 
+			// Tampilkan hasil bmi ke element
 			resultNumber.innerText = result.toFixed(1);
 			resultText.innerHTML = "Kamu <b>" + `${bmiResult.tipe}` + "</b>";
 			resultExplanation.innerText = bmiResult.keterangan;
@@ -110,9 +111,11 @@ document.addEventListener("DOMContentLoaded", function () {
 	const body = document.body;
 	// Ketika radio di klik
 	radioPria.addEventListener("click", function () {
+		// Tambahkan class women untuk mengubah accent warna
 		body.classList.remove("women");
 	});
 	radioWanita.addEventListener("click", function () {
+		// Hilangkan class women
 		body.classList.add("women");
 	});
 });
