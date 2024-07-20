@@ -6,7 +6,7 @@ const bmi = {
 	},
 	normal: {
 		tipe: "Normal",
-		keterangan: "Kamu normal! Kamu memiliki berat badan yang sehat dan proporsional, dengan risiko lebih rendah terhadap penyakit jantung, diabetes, dan masalah kesehatan lainnya.",
+		keterangan: "Kamu memiliki berat badan yang sehat dan proporsional, dengan risiko lebih rendah terhadap penyakit jantung, diabetes, dan masalah kesehatan lainnya.",
 	},
 	gemuk: {
 		tipe: "Gemuk",
@@ -14,7 +14,7 @@ const bmi = {
 	},
 	obesitas: {
 		tipe: "Obesitas",
-		keterangan: "Ini adalah kondisi serius! risiko penyakit kronis seperti diabetes, penyakit jantung, stroke, dan kanker. Penanganan medis dan perubahan gaya hidup mungkin diperlukan untuk mengelola obesitas Anda.",
+		keterangan: "Ini adalah kondisi serius! Kamu beresiko terkena penyakit kronis seperti diabetes, penyakit jantung, stroke, dan kanker. Penanganan medis dan perubahan gaya hidup mungkin diperlukan untuk mengelola obesitas mu.",
 	},
 	origin: {
 		tipe: "",
