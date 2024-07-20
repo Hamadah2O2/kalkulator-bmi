@@ -298,7 +298,7 @@ section.result-section {
 	font-size: 0.9rem;
 	display: inline-block;
 	padding: var(--input-pad);
-	text-align: center;
+	text-align: justify;
 	margin-bottom: calc(var(--margin-bottom-res) * 2);
 	color: hsl(0 0% 0% / 60%);
 	transition: 0.3s ease-in-out;
